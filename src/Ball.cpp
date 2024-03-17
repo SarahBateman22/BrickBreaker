@@ -32,14 +32,15 @@ float Ball::getXVelocity(){
     return m_directionx;
 }
 
-//bounces off the sides of the walls
+//reverse direction to bounce off the sides of the walls
 void Ball::BounceOffWalls(){
     m_directionx = -m_directionx;
 }
 
-//tells us when the ball hits the bottom and if the player "misses"
+//when the player misses the trampoline and goes off the screen
 void Ball::missBottom(){
-    m_position.x=400; //put the ball back in the middle of the screen underneath the bricks
+    //put the ball back in the middle of the screen underneath the bricks
+    m_position.x=400;
     m_position.y=350;
     m_speed = m_speed/2;
 }

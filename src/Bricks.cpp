@@ -27,7 +27,6 @@ gameBrick::gameBrick(){
 //brick constructor with x and y positions
 sf::RectangleShape gameBrick::createGameBrick(int xPos, int yPos)
 {
-    //gameBrick RectangleShape;
     sf::RectangleShape brick(sf::Vector2f(100.f, 50.f));
     brick.setFillColor(sf::Color(140, 90, 77));
     brick.setOutlineColor(sf::Color(61, 38, 37));
@@ -49,7 +48,7 @@ std::vector<sf::RectangleShape> exampleLevel (){
 }
 
 
-//function to call that creates all the bricks with their pos
+//level one bricks setup
 std::vector<sf::RectangleShape> levelOneBricks (){
     std::vector<sf::RectangleShape> bricksVector;
     gameBrick brick1;
@@ -83,7 +82,7 @@ std::vector<sf::RectangleShape> levelOneBricks (){
     return bricksVector;
 }
 
-//function to call that creates all the bricks with their pos
+//level two bricks setup
 std::vector<sf::RectangleShape> levelTwoBricks (){
     std::vector<sf::RectangleShape> bricksVector;
         gameBrick brick1;
